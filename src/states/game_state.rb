@@ -262,19 +262,19 @@ class GameState < State
 
   def draw_when_pause
     return unless @paused
-    @shade_image.draw(0, 0, ZOrder::COVER)
+    @shade_image.draw_text(0, 0, ZOrder::COVER)
     @pause_options.each_with_index do |option, i|
       caption = option
       caption = '  ' + caption if i == @current_option
       top_margin = @margins[1] + (@margins[2] * i)
-      @pause_font.draw(caption, @margins[0], top_margin, ZOrder::UI)
+      @pause_font.draw_text(caption, @margins[0], top_margin, ZOrder::UI)
     end
   end
 
   def draw_when_loading
     return unless @loading
-    @shade_image.draw(0, 0, ZOrder::COVER)
-    @loading_font.draw_rot(WIDTH / 2, HEIGHT / 2, ZOrder::UI, 0.0)
+    @shade_image.draw_text(0, 0, ZOrder::COVER)
+    @loading_font.draw_text_rot(WIDTH / 2, HEIGHT / 2, ZOrder::UI, 0.0)
     if @loading_index < @loading_texts.size
       handle_countdown unless @paused
     else

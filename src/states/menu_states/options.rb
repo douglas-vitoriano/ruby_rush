@@ -49,7 +49,7 @@ class OptionsMenuState < MenuState
         margin_top = @margins[2]
         font = @back_font
       end
-      font.draw(caption, @margins[0], margin_top, ZOrder::UI)
+      font.draw_text(caption, @margins[0], margin_top, ZOrder::UI)
     end
   end
 
@@ -60,7 +60,7 @@ class OptionsMenuState < MenuState
       @options_difficulty,
       @options_countdown
     ].each_with_index do |caption, i|
-      @option_font.draw(caption, @margins[3], @margins[0] * (i + 1), ZOrder::UI)
+      @option_font.draw_text(caption, @margins[3], @margins[0] * (i + 1), ZOrder::UI)
     end
   end
 

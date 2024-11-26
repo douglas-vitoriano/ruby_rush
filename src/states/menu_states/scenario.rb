@@ -15,7 +15,7 @@ class ScenarioMenuState < MenuState
 
   def draw
     super
-    @select.draw(@current_option == 1 ? 0 : WIDTH / 2, 0, ZOrder::COVER)
+    @select.draw_text(@current_option == 1 ? 0 : WIDTH / 2, 0, ZOrder::COVER)
   end
 
   def handle_choice

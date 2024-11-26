@@ -41,7 +41,7 @@ class GarageMenuState < MenuState
         margin_top = @margins[2]
         font = @option_font
       end
-      font.draw(caption, @margins[0], margin_top, ZOrder::UI)
+      font.draw_text(caption, @margins[0], margin_top, ZOrder::UI)
     end
   end
 

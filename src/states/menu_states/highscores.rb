@@ -31,7 +31,7 @@ class HighScoresMenuState < MenuState
   def draw_options
     @options.each_with_index do |option, i|
       caption = i == @current_option ? '  ' + option : option
-      @option_font.draw(caption, @margin_score[0],
+      @option_font.draw_text(caption, @margin_score[0],
                         @margin_option[i], ZOrder::UI)
     end
   end
@@ -40,8 +40,8 @@ class HighScoresMenuState < MenuState
     @scores.each_with_index do |score, i|
       left_margin = @margin_score[0]
       top_margin = @margin_score[0] + (@margin_score[2] * i)
-      @score_font.draw(@scores_label[i], left_margin, top_margin, ZOrder::UI)
-      @score_font.draw(score, @margin_score[1], top_margin, ZOrder::UI)
+      @score_font.draw_text(@scores_label[i], left_margin, top_margin, ZOrder::UI)
+      @score_font.draw_text(score, @margin_score[1], top_margin, ZOrder::UI)
     end
   end
 

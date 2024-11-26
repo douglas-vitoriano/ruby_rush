@@ -36,7 +36,7 @@ class Road
   end
 
   def draw
-    @image.draw(@xa, @ya, ZOrder::BACKGROUND)
-    @image.draw(@xb, @yb, ZOrder::BACKGROUND)
+    @image.draw_text(@xa, @ya, ZOrder::BACKGROUND)
+    @image.draw_text(@xb, @yb, ZOrder::BACKGROUND)
   end
 end
