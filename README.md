@@ -1,17 +1,18 @@
 # Ruby Rush
 
-Ruby Rush, é um jogo de corrida desenvolvido em [Ruby](https://www.ruby-lang.org/en/documentation/) com a gem [Gosu](https://www.libgosu.org/)
+**Ruby Rush** is a racing game developed in [Ruby](https://www.ruby-lang.org/en/documentation/) using the [Gosu](https://www.libgosu.org/) gem.
+
 
 ![alt text](image.png)
 
-## Primeiros passos
 
-Após instalar *Ruby* e *Gosu*, você deve conseguir chamar racing.rb
+## Getting Started
 
-## Autor
+After installing Ruby and Gosu, you should be able to run [racing.rb](https://github.com/douglas-vitoriano/ruby_rush/blob/main/racing.rb)
+
+## Author
 
 - *Douglas* - [@douglas-vitoriano](https://github.com/douglas-vitoriano)
 
-## Licença
-
-Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para obter detalhes
+## License
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/douglas-vitoriano/ruby_rush/blob/main/LICENSE) file for details.
