@@ -1,0 +1,3 @@
+module ZOrder
+  BACKGROUND, CARS, PLAYER, ELEMENT, COVER, UI = *0..5
+end

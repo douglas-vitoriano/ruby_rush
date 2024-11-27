@@ -12,16 +12,16 @@
     "QUE OTÁRIO!",
     "QUE IMBECIL!",
     "Você vai\npagar por\nisso!",
-    "Ei!\nNão faça isso!",
-    "Presta atenção!",
+    "Ei!\nNão faça merda!",
+    "Presta atenção!\nPé de Rato",
     "Sai da frente,\nimbecil!",
     "Mas que\np***a, idiota!",
     "Fica na\nsua faixa!",
-    "Acelerador\nnão é brinquedo\nnão!",
-    "Você é\num idiota!",
-    "Vê se aprende\na dirigir!",
-    "Obrigado por\nme cortar!",
-    "VOCÊ TÁ CEGO?"
+    "Acelerador\nnão é brinquedo!",
+    "Tira o pé do\nfreio!",
+    "TA LOUCO?\nPagou o quebra?",
+    "Obrigado, por\nme cortar.\nTramontina!",
+    "VOCÊ TÁ CEGO?\nRay Charles"
   ],
   "new_score": "Parabéns!\nNovo recorde!",
   "score_label": "Pontuação",
@@ -37,8 +37,8 @@
   "cars_option": [
     "Padrão",
     "Ambulância",
-    "Audi",
-    "Viper Preto",
+    "Esportivo",
+    "Super esportivo",
     "Picape",
     "Mini Van",
     "Polícia",
@@ -63,11 +63,11 @@
     "Reiniciar",
     "Sair"
   ],
-  "easy": "Fácil",
-  "normal": "Normal",
-  "hard": "Difícil",
-  "very_hard": "Muito difícil",
+  "easy": "Patinho",
+  "normal": "Patinho Pleno",
+  "hard": "Quase normal, tá?",
+  "very_hard": "Puts, aqui pode ficar complicado!",
   "countdown": [
-    "3", "2", "1", "VAI!"
+    "3", "2", "1", "VAI DOIDO!"
   ]
 }

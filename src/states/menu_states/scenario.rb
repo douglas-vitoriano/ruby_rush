@@ -1,4 +1,3 @@
-# This class handles the Scenario menu behavior.
 class ScenarioMenuState < MenuState
   def initialize(options = {})
     super options
@@ -15,7 +14,7 @@ class ScenarioMenuState < MenuState
 
   def draw
     super
-    @select.draw_text(@current_option == 1 ? 0 : WIDTH / 2, 0, ZOrder::COVER)
+    @select.draw(@current_option == 1 ? 0 : Path::WIDTH / 2, 0, ZOrder::COVER)
   end
 
   def handle_choice

@@ -1,4 +1,3 @@
-# This class contains the CPU cars functionality.
 class Car
   attr_reader :x, :y, :song, :angle
   attr_accessor :sample, :stop_x, :speed

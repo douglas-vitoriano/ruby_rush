@@ -6,8 +6,8 @@ class Speedometer
     @speedometer = Gosu::Image.new(Path::IMAGES + 'speedometer.png')
     @speedometer_pointer =
       Gosu::Image.new(Path::IMAGES + 'speedometer-pointer.png')
-    @x = WIDTH - 80
-    @y = HEIGHT - 80
+    @x = Path::WIDTH - 80
+    @y = Path::HEIGHT - 80
   end
 
   def angle(player)

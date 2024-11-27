@@ -1,4 +1,3 @@
-# This class handles the High Scores menu behavior.
 class HighScoresMenuState < MenuState
   def initialize(options = {})
     super options
@@ -6,7 +5,7 @@ class HighScoresMenuState < MenuState
       @main.lang['option_clear'],
       @main.lang['option_back']
     ]
-    @margin_option = [HEIGHT - 65, HEIGHT - 45]
+    @margin_option = [Path::HEIGHT - 80, Path::HEIGHT - 60]
     @margin_score = [30, 150, 25]
     @scores = @main.data['high_scores']
     @scores_label = @main.lang['high_scores']
@@ -31,7 +30,7 @@ class HighScoresMenuState < MenuState
   def draw_options
     @options.each_with_index do |option, i|
       caption = i == @current_option ? '  ' + option : option
-      @option_font.draw_text(caption, @margin_score[0],
+      @option_font.draw(caption, @margin_score[0],
                         @margin_option[i], ZOrder::UI)
     end
   end
@@ -40,8 +39,8 @@ class HighScoresMenuState < MenuState
     @scores.each_with_index do |score, i|
       left_margin = @margin_score[0]
       top_margin = @margin_score[0] + (@margin_score[2] * i)
-      @score_font.draw_text(@scores_label[i], left_margin, top_margin, ZOrder::UI)
-      @score_font.draw_text(score, @margin_score[1], top_margin, ZOrder::UI)
+      @score_font.draw(@scores_label[i], left_margin, top_margin, ZOrder::UI)
+      @score_font.draw(score, @margin_score[1], top_margin, ZOrder::UI)
     end
   end
 

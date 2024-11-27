@@ -1,5 +1,3 @@
-# This class is responsible to extend the on game behavior
-# to a one way scenario.
 class OneWayGameState < GameState
   MODE_INDEX = 0
 

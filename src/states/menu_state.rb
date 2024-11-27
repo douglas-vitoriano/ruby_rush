@@ -1,4 +1,3 @@
-# This class handles the Menu state behavior.
 class MenuState < State
   def initialize(options = {})
     super options
@@ -8,7 +7,7 @@ class MenuState < State
   end
 
   def load_assets
-    raise NotImplementedError, 'This is not implemented!'
+    raise NotImplementedError, 'This is not allowed!'
   end
 
   def update
@@ -19,7 +18,7 @@ class MenuState < State
   end
 
   def handle_choice
-    raise NotImplementedError, 'This is not implemented!'
+    raise NotImplementedError, 'This is not allowed'
   end
 
   def handle_navigation(button_id)

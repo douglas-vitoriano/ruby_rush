@@ -1,4 +1,3 @@
-# This class contains the Player properties and functionality.
 class Player
   attr_reader :song, :speed, :speed_limit, :speed_minimun
   attr_accessor :score, :sample

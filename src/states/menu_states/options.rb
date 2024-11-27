@@ -1,11 +1,10 @@
-# This class handles the Options menu behavior.
 class OptionsMenuState < MenuState
   def initialize(options = {})
     super options
     load_options
     load_languages
     load_difficulties
-    @margins = [30, 30, HEIGHT - 45, 250]
+    @margins = [30, 30, Path::HEIGHT - 45, 250]
     @current_language =
       @languages.find { |l| l[1] == @main.data['config']['language'] }
   end
@@ -49,7 +48,7 @@ class OptionsMenuState < MenuState
         margin_top = @margins[2]
         font = @back_font
       end
-      font.draw_text(caption, @margins[0], margin_top, ZOrder::UI)
+      font.draw(caption, @margins[0], margin_top, ZOrder::UI)
     end
   end
 
@@ -60,7 +59,7 @@ class OptionsMenuState < MenuState
       @options_difficulty,
       @options_countdown
     ].each_with_index do |caption, i|
-      @option_font.draw_text(caption, @margins[3], @margins[0] * (i + 1), ZOrder::UI)
+      @option_font.draw(caption, @margins[3], @margins[0] * (i + 1), ZOrder::UI)
     end
   end
 

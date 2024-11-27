@@ -1,4 +1,3 @@
-# This class is responsible to handle the on game behavior.
 class GameState < State
   def initialize(options = {})
     super options
@@ -56,7 +55,7 @@ class GameState < State
     @pause_font = Gosu::Font.new(25, name: Path::FONTS + 'Play-Regular.ttf')
     @pause_options = @main.lang['pause_options']
     @current_option = 0
-    @margins = [30, HEIGHT - 100, 30]
+    @margins = [30, Path::HEIGHT - 100, 30]
   end
 
   def load_loading_properties
@@ -69,12 +68,12 @@ class GameState < State
   end
 
   def load_player
-    current_car = CARS[@main.data['current_car']]
+    current_car = Path::CARS[@main.data['current_car']]
     @player = Player.new(current_car[0], current_car[1],
                          @options[:player_margin_left],
                          @options[:player_margin_right])
     @player.sample = @main.play_sound(@player.song, true, 0.5) if @player.song
-    @player.warp(WIDTH / 2, HEIGHT - 90)
+    @player.warp(Path::WIDTH / 2, Path::HEIGHT - 90)
   end
 
   def millis
@@ -95,7 +94,7 @@ class GameState < State
   end
 
   def next_car
-    car = CARS.sample
+    car = Path::CARS.sample
     angle_index = rand(@options[:cars_angle].size)
     pos = possible_positions(angle_index)
     Car.new(car[0], car[1], @options[:cars_angle][angle_index],
@@ -253,28 +252,28 @@ class GameState < State
   def draw_when_dead
     return if @alive
     if @main.data['high_scores'][0] == @player.score
-      @newscore.draw_rot(WIDTH / 2, HEIGHT / 2, ZOrder::UI, -7.0)
+      @newscore.draw_rot(Path::WIDTH / 2, Path::HEIGHT / 2, ZOrder::UI, -7.0)
     elsif !@alive
-      @gameover.draw_rot(WIDTH / 2, HEIGHT / 2, ZOrder::UI, -7.0)
+      @gameover.draw_rot(Path::WIDTH / 2, Path::HEIGHT / 2, ZOrder::UI, -7.0)
     end
     @gameover_image.draw(0, 0, ZOrder::COVER)
   end
 
   def draw_when_pause
     return unless @paused
-    @shade_image.draw_text(0, 0, ZOrder::COVER)
+    @shade_image.draw(0, 0, ZOrder::COVER)
     @pause_options.each_with_index do |option, i|
       caption = option
       caption = '  ' + caption if i == @current_option
       top_margin = @margins[1] + (@margins[2] * i)
-      @pause_font.draw_text(caption, @margins[0], top_margin, ZOrder::UI)
+      @pause_font.draw(caption, @margins[0], top_margin, ZOrder::UI)
     end
   end
 
   def draw_when_loading
     return unless @loading
-    @shade_image.draw_text(0, 0, ZOrder::COVER)
-    @loading_font.draw_text_rot(WIDTH / 2, HEIGHT / 2, ZOrder::UI, 0.0)
+    @shade_image.draw(0, 0, ZOrder::COVER)
+    @loading_font.draw_rot(Path::WIDTH / 2, Path::HEIGHT / 2, ZOrder::UI, 0.0)
     if @loading_index < @loading_texts.size
       handle_countdown unless @paused
     else

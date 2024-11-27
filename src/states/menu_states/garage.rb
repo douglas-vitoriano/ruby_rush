@@ -1,15 +1,14 @@
-# This class handles the Garage menu behavior.
 class GarageMenuState < MenuState
   def initialize(options = {})
     super options
     load_options
-    @margins = [30, 30, HEIGHT - 45]
+    @margins = [30, 30, Path::HEIGHT - 45]
   end
 
   def load_options
     @options = @main.lang['cars_option'].push(@main.lang['option_back']).uniq
     @current_option = @main.data['current_car']
-    @car = Gosu::Image.load_tiles(CARS[@current_option][0], 140, 140)
+    @car = Gosu::Image.load_tiles(Path::CARS[@current_option][0], 140, 140)
   end
 
   def load_assets
@@ -41,7 +40,7 @@ class GarageMenuState < MenuState
         margin_top = @margins[2]
         font = @option_font
       end
-      font.draw_text(caption, @margins[0], margin_top, ZOrder::UI)
+      font.draw(caption, @margins[0], margin_top, ZOrder::UI)
     end
   end
 
@@ -50,7 +49,7 @@ class GarageMenuState < MenuState
     when @options.size - 1
       @main.state = 0
     else
-      @car = Gosu::Image.load_tiles(CARS[@current_option][0], 140, 140)
+      @car = Gosu::Image.load_tiles(Path::CARS[@current_option][0], 140, 140)
       @main.data['current_car'] = @current_option
     end
   end

@@ -1,4 +1,3 @@
-# This class is responsible to handle the i18n support.
 class Lang
   attr_reader :languages
 

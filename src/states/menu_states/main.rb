@@ -1,4 +1,3 @@
-# This class handles the Main menu behavior.
 class MainMenuState < MenuState
   def initialize(options = {})
     super options
@@ -20,7 +19,7 @@ class MainMenuState < MenuState
       caption = option
       caption = '  ' + caption if i == @current_option
       top_margin = @margins[0] + (@margins[1] * i)
-      @font.draw_text(caption, @margins[0], top_margin, ZOrder::UI)
+      @font.draw(caption, @margins[0], top_margin, ZOrder::UI)
     end
   end
 
